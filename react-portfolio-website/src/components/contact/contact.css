@@ -1,0 +1,88 @@
+/* Styling the contact form section */
+.container.contact__container {
+    width: 58%;
+    display: grid;
+
+    /* 30 for the left, 58 for the right */
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+
+/* Styles the options section as a whole */
+.contact__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Styles the individual options */
+.contact__option {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+
+    /* Creates a smooth transition while hovering */
+    transition: var(--transition);
+}
+
+/* Creates a hover effect on the contact options */
+.contact__option:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
+/* Styles the icons of contact options */
+.contact__option-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Styles the send message link of the contact options */
+.contact__option a {
+    margin-top: 0.7rem;
+
+    /* inline-block allows you to set a width and height on the element */
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+/* === FORM === */
+/* Styling the form side */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Styles the name and email inputs, along with the text area */
+input, textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+
+    /* Ensures user cannot resize the text area to make it bigger or smaller */
+    resize: none;
+
+    /* Sets text color to white to make it more visible */
+    color: var(--color-white);
+}
+
+/* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */
+@media screen and (max-width: 1024px) {
+    .container.contact__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* === MEDIA QUERIES (SMALL DEVICES, like a mobile device) === */
+/* Changes size and margins of elements to fit the smaller devices */
+@media screen and (max-width: 600px) {
+    .container.contact__container {
+        width: var(--container-width-sm);
+    }
+}

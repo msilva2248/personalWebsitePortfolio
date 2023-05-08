@@ -1,0 +1,55 @@
+/* Styling the navigation bar */
+nav {
+    /* Color black with some transparency */
+    background: rgba(0, 0, 0, 0.3);
+
+    /* Fits exactly its contents */
+    width: max-content;
+    display: block;
+
+    /* 0.7 for top and bottom, 1.7 for left and right */
+    padding: 0.7rem 1.7rem;
+    z-index: 2;
+
+    /* Fixed position so it stays in place */
+    position: fixed;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+
+    /* Creates space between buttons with a gap */
+    display: flex;
+    gap: 0.8rem;
+
+    border-radius: 3rem;
+
+    /* Adds a blur behind the icons when going over them */
+    backdrop-filter: blur(15px);
+}
+
+/* Targeting the links inside the nav bar */
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+
+    /* Creates space between the links in this case */
+    display: flex;
+
+    color: var(--color-light);
+    font-size: 1.1rem;
+}
+
+/* Adding a hover effect to icons in nav bar */
+nav a:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Create an active class which is home in this case by default */
+nav a.active {
+    background: var(--color-primary);
+    
+    /* Color of text */
+    color: var(--color-bg);
+}

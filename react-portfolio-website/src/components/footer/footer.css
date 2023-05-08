@@ -1,0 +1,87 @@
+/* Styling the footer section */
+footer {
+    background: var(--color-primary);
+
+    /* 3rem for the top and bottom, 0 for the left and right */
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+}
+
+/* Changes the color of the links */
+footer a {
+    color: var(--color-bg);
+}
+
+/* Styles the logo for the footer */
+.footer__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+
+    /* Allows you to set a width and height of the logo */
+    display: inline-block;
+}
+
+/* Styles the links to each section on the page */
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    /* 0 for the top, auto for the left and right, 3rem for the bottom */
+    margin: 0 auto 3rem;
+}
+
+/* Styles the LinkedIn social in the footer */
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+/* Styles the link within the LinkedIn social */
+.footer__socials a {
+    background: var(--color-bg);
+
+    /* Text color */
+    color: var(--color-white);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid transparent;
+
+    /* Creates a smooth hover transition */
+    /* transition: var(--transition);*/
+}
+
+/* Creates a hover effect over the social */
+.footer__socials a:hover {
+    background: transparent;
+
+    /* Text color */
+    color: var(--color-bg);
+    border-color: var(--color-bg);
+}
+
+/* Styles the copyright tag */
+.footer__copyright {
+    margin-bottom: 4rem;
+    color: var(--color-bg);
+}
+
+/* === MEDIA QUERIES (SMALL DEVICES, like a mobile device) === */
+/* Changes size and margins of elements to fit the smaller devices */
+@media screen and (max-width: 600px) {
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer__socials {
+        margin-bottom: 2.6rem;
+    }
+}
