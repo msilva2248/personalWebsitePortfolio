@@ -5,6 +5,7 @@ import axios from 'axios'
 
 const Experience = () => {
 
+  // Loads frontend skills and sets values to result
   const [frontend, setFrontend]=useState([])
 
   useEffect(()=>{
@@ -16,6 +17,7 @@ const Experience = () => {
     setFrontend(result.data);
   }
 
+  // Loads backend skills and sets values to result
   const [backend, setBackend]=useState([])
 
   useEffect(()=>{
@@ -26,6 +28,18 @@ const Experience = () => {
     const result=await axios.get("http://localhost:8080/backend/skills");
     setBackend(result.data);
   }
+
+  // Loads about me info and sets values to result
+  // const [about, setAbout]=useState([])
+
+  // useEffect(()=>{
+  //   loadAbout();
+  // },[]);
+
+  // const loadAbout=async()=>{
+  //   const result=await axios.get("http://localhost:8080/about/me");
+  //   setAbout(result.data);
+  // }
 
   return (
     <section id='experience'>

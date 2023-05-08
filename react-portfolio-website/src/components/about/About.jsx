@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './about.css'
 import Headshot from '../../assets/Headshot.png'
 import {FaAward} from 'react-icons/fa'
 import {VscFolderLibrary} from 'react-icons/vsc'
+import axios from 'axios'
 
 const About = () => {
+
+  // Loads about me info and sets values to result
+  const [about, setAbout]=useState([])
+
+  useEffect(()=>{
+    loadAbout();
+  },[]);
+
+  const loadAbout=async()=>{
+    const result=await axios.get("http://localhost:8080/about/me");
+    setAbout(result.data);
+  }
+
   return (
     <section id='about'>
       <h5>Get To Know</h5>
@@ -29,21 +43,36 @@ const About = () => {
             <article className='about__card'>
               <FaAward className='about__icon'/>
               <h5>Experience</h5>
-              <small>4+ Years Experience</small>
+              {/* <small>4+ Years Experience</small> */}
+              {
+                about.map((about, index)=>(
+                  <small>{about.experience}</small>
+                ))
+              }
             </article>
 
             <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              <small>15+ Completed</small>
+              {/* <small>15+ Completed</small> */}
+              {
+                about.map((about, index)=>(
+                  <small>{about.projects}</small>
+                ))
+              }
             </article>
           </div>
 
             {/* This will display the paragraph section in the about me */}
           <p>
-            I graduated from Texas Tech University on December 17th, 2022 with a Bachelor's degree in 
+            {
+              about.map((about, index)=>(
+                <small>{about.intro}</small>
+              ))
+            }
+            {/* I graduated from Texas Tech University on December 17th, 2022 with a Bachelor's degree in 
             Computer Science and a minor in Mathematics. I am currently pursuing
-            a career in Software Development in El Paso, TX or Remote.
+            a career in Software Development in El Paso, TX or Remote. */}
           </p>
 
             {/* a tag creates a hyperlink, href contains the URL to the destination */
