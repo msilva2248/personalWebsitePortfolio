@@ -1,0 +1,137 @@
+/* Styling the experience section */
+/* Container wraps around all contents of experience, and the grid 
+allows for better organization on the web page */
+.experience__container {
+    display: grid;
+
+    /* 50% on the left and the right, with a gap between elements */
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Gets direct divs inside the container (frontend/backend experience) */
+.experience__container > div {
+    background: var(--color-bg-variant);
+
+    /* 2.4 for top and bottom, 5 for left and right */
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+
+    /* Smooth out the hover transition */
+    transition: var(--transition);
+}
+
+/* Creates a hover effect for the cards */
+.experience__container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+/* Gets the direct divs and the header 3 within them to style */
+.experience__container > div h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+/* .experience__frontend table {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+} */
+
+.experience__container > div table {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.experience__container > div td {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.experience__container > div th {
+    text-align: center;
+}
+
+/* .table {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.table > thead th {
+    text-align: center;
+}
+
+.table > tbody td {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+} */
+
+/* .skills__icon {
+    padding: 5px;
+    color: var(--color-primary);
+} */
+
+
+
+/* Style the content within each skill header */
+/* .experience__content {
+    display: grid; */
+
+    /* 1fr ensures half the available space is taken up, with a row gap 
+    to ensure space between each skill */
+    /* grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+} */
+
+/* Styles the actual skills and level of experience */
+/* .experience__details { */
+    /* Flexible design on web page */
+    /* display: flex;
+    gap: 1rem;
+} */
+
+/* Styles the check icon of all skills so it can be aligned correctly */
+/* .experience__details-icon {
+    margin-top: 6px;
+    color: var(--color-primary);
+} */
+
+/* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */
+@media screen and (max-width: 1024px) {
+    .experience__container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience__container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .experience__content {
+        padding: 1rem;
+    }
+}
+
+/* === MEDIA QUERIES (SMALL DEVICES, like a mobile device) === */
+/* Changes size and margins of elements to fit the smaller devices */
+@media screen and (max-width: 600px) {
+    .experience__container {
+        gap: 1rem;
+    }
+
+    .experience__container > div {
+        width: 100%;
+
+        /* 2 for top and bottom, 1 for left and right */
+        padding: 2rem 1rem;
+    }
+}

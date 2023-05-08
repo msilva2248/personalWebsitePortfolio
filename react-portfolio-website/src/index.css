@@ -1,0 +1,179 @@
+/* Importing font styles from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* "*" Every element on website will have this style */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    
+    /* Removes bullets from every list item */
+    list-style: none;
+
+    /* Removes underlines from links */
+    text-decoration: none;
+}
+
+/* Creating CSS variables, (root variables so they can be used anywhere in the project) */
+:root {
+    --color-bg: #000000;
+    --color-bg-variant: #707070;
+    --color-primary: #ffffff;
+    --color-primary-variant: rgba(123, 123, 123, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+
+    --transition: all 400ms ease;
+
+    /* Width of container class that will wrap around different elements */
+    /* lg, md, and sm for large, medium and small */
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+}
+
+html {
+    /* Smoothly scroll through various sections */
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    /* Removes scrollbar, not needed */
+    display: none;
+}
+
+body {
+    /* Changes font to Poppins, which has the styles we imported above */
+    font-family: 'Poppins', sans-serif;
+
+    /* Sets background to the value of our CSS variable bg */
+    background: var(--color-bg);
+
+    /* Sets text color to value of our CSS variable white */
+    color: var(--color-white);
+
+    line-height: 1.7;
+
+    /* Sets background to texture of png image */
+    background-image: url(../src/assets/bg-texture.png);
+}
+
+/* === GENERAL STYLES === */
+/* General container class */
+.container {
+    /* Sets width to value of large container width CSS variable */
+    /* Width will differ based on the device being used */
+    width: var(--container-width-lg);
+
+    /* Auto positions the container horizontally in the middle */
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;   
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    /* To have a whitespace around the different sections (components) */
+    margin-top: 8rem;
+}
+
+/* Every section will have an h2 and h5, a direct child of the section tag */
+section > h2, section > h5 {
+    text-align: center;
+    color: var(--color-light);
+}
+
+section > h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+/* General class of text light, some elements will be changed to this color */
+.text-light {
+    color: var(--color-light)
+}
+
+/* Every anchor tag will have this color */
+a {
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+/* Every anchor tag will also have a hover effect */
+a:hover {
+    color: var(--color-white);
+}
+
+/* Another general class - each is needed to make the process of working with
+various components easier */
+/* This will be for the different buttons the site will have */
+.btn {
+    /* Ensures each button fits exactly its content */
+    width: max-content;
+
+    display: inline-block;
+    color: var(--color-primary);
+
+    /* 0.75 handles the top and bottom, 1.2 is for the left and right */
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+
+    /* To smoothen the hover */
+    transition: var(--transition);
+}
+
+/* Adding a hover effect to each button */
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+/* Some buttons will utilize another btn primary class */
+.btn-primary {
+    background: var(--color-primary);
+
+    /* Color of the text */
+    color: var(--color-bg);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */
+@media screen and (max-width: 1024px) {
+    /* Gets general container class and changes the width */
+    .container {
+        width: var(--container-width-md);
+    }
+
+    /* Gets section tag as well */
+    section {
+        margin-top: 6rem;
+    }
+}
+
+/* === MEDIA QUERIES (SMALL DEVICES, like a mobile device) === */
+@media screen and (max-width: 600px) {
+    /* Gets general container class and changes the width */
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    /* Gets h2 section tag */
+    section > h2 {
+        margin-bottom: 2rem;
+    }
+}

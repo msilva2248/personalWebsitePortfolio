@@ -1,0 +1,60 @@
+/* Styling the portfolio section */
+/* The container wraps every element in this section with a gap and 
+each element utilizes 1/3 fraction of available space */
+.portfolio__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+/* Styles the actual items in the portfolio */
+.portfolio__item {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+
+    /* Creates a smooth transition for the hover effect */
+    transition: var(--transition);
+}
+
+/* Creates the hover effect over the portfolio items */
+.portfolio__item:hover {
+    border-color: var(--color-primary-variant);
+    background: transparent;
+}
+
+/* Styling the portfolio image */
+.portfolio__item-image {
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+/* Styles the h3 headers within the portfolio item class */
+.portfolio__item h3 {
+    margin: 1.2rem 0 2rem;
+}
+
+/* Styles the call to action buttons (CTA) */
+.portfolio__item-cta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */
+@media screen and (max-width: 1024px) {
+    .portfolio__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
+
+/* === MEDIA QUERIES (SMALL DEVICES, like a mobile device) === */
+/* Changes size and margins of elements to fit the smaller devices */
+@media screen and (max-width: 600px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

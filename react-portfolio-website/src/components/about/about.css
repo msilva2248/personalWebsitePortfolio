@@ -1,0 +1,141 @@
+/* Styling the about me section */
+.about__container {
+    display: grid;
+
+    /* 35% for the left, 50% for the right, with a gap between elements */ 
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+/* This is the styling for the about me image section */
+.about__me {
+    width: 100%;
+
+    /* Height will always match the width */
+    aspect-ratio: 1/1;
+
+    /* 20rem radius creates the circle behind the image */
+    border-radius: 20rem;
+    
+    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+    
+    /* Grid allows for alignment of elements in rows and columns */
+    display: grid;
+    place-items: center;
+}
+
+/* This is for styling the image transformation */
+.about__me-image {
+    /* This width determines the size of the image */
+    width: 50%;
+    
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+
+    /* Slows down the rotation while hovering */
+    transition: var(--transition);
+}
+
+/* To reset the image rotation when hovering over */
+.about__me-image:hover {
+    transform: rotate(0deg);
+}
+
+/* For stlying the cards section (experience, projects) */
+.about__cards {
+    display: grid;
+
+    /* repeat allows recurring patterns to be written in a compact form */
+    /* 3, 1fr represents the fraction of available space in the grid */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* This styles the individual cards */
+.about__card {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+
+    /* Smooths out the transition of the hover */
+    transition: var(--transition);
+}
+
+/* This will add a hover effect over the cards */
+.about__card:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+/* Targeting the style of the icons */
+.about__icon {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+/* Styling the h5 section of the cards */
+.about__card h5 {
+    font-size: 0.95rem;
+}
+
+/* Styling the small tag section of the cards */
+.about__card small {
+    font-size: 0.7rem;
+    
+    /* For the text color */
+    color: var(--color-light);
+}
+
+/* Styling the paragraph contents */
+.about__content p {
+    /* 2rem for the top, 0 for the left and right, 2.6rem for the bottom */
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+}
+
+/* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */
+@media screen and (max-width: 1024px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about__me {
+        width: 50%;
+
+        /* 2rem for the top, 4rem for the bottom, auto for left and right */
+        margin: 2rem auto 4rem;
+    }
+
+    .about__content p {
+        /* 1rem for the top of the paragraph, 0 for left and right, 1.5 for the bottom */
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+/* === MEDIA QUERIES (SMALL DEVICES, like a mobile device) === */
+/* Changes size and margins of elements to fit the smaller devices */
+@media screen and (max-width: 600px) {
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about__content {
+        text-align: center;
+    }
+
+    .about__content p {
+        margin: 1.5rem 0;
+    }
+}
