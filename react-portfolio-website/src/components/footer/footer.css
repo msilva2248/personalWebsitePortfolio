@@ -48,7 +48,7 @@ footer a {
     background: var(--color-bg);
 
     /* Text color */
-    color: var(--color-white);
+    color: var(--color-primary);
     padding: 0.8rem;
     border-radius: 0.7rem;
     display: flex;

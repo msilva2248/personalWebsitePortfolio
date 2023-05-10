@@ -33,7 +33,7 @@ allows for better organization on the web page */
 .experience__container > div h3 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 /* .experience__frontend table {
@@ -45,7 +45,7 @@ allows for better organization on the web page */
 .experience__container > div table {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .experience__container > div td {

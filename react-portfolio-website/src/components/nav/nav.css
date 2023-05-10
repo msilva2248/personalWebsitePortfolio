@@ -1,7 +1,7 @@
 /* Styling the navigation bar */
 nav {
     /* Color black with some transparency */
-    background: rgba(0, 0, 0, 0.3);
+    background: #5e3b0d71;
 
     /* Fits exactly its contents */
     width: max-content;
@@ -43,13 +43,13 @@ nav a {
 
 /* Adding a hover effect to icons in nav bar */
 nav a:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: #5e3b0d71;
 }
 
 /* Create an active class which is home in this case by default */
 nav a.active {
-    background: var(--color-primary);
+    background: var(--color-bg);
     
     /* Color of text */
-    color: var(--color-bg);
+    color: var(--color-white);
 }
