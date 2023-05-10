@@ -9,6 +9,7 @@ each element utilizes 1/3 fraction of available space */
 
 /* Styles the actual items in the portfolio */
 .portfolio__item {
+    height: 400px;
     background: var(--color-bg-variant);
     padding: 1.2rem;
     border-radius: 2rem;
@@ -25,7 +26,7 @@ each element utilizes 1/3 fraction of available space */
 }
 
 /* Styling the portfolio image */
-.portfolio__item-image {
+.portfolio__item-img {
     border-radius: 1.5rem;
     overflow: hidden;
 }
@@ -33,13 +34,18 @@ each element utilizes 1/3 fraction of available space */
 /* Styles the h3 headers within the portfolio item class */
 .portfolio__item h3 {
     margin: 1.2rem 0 2rem;
+    text-align: center;
+    font-size: 150%;
 }
 
 /* Styles the call to action buttons (CTA) */
 .portfolio__item-cta {
+    width: max-content;
+    border-radius: 0.7rem;
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin: 3rem 7rem;
+    background-color: var(--color-bg);
 }
 
 /* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */

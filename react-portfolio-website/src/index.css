@@ -18,12 +18,14 @@
 
 /* Creating CSS variables, (root variables so they can be used anywhere in the project) */
 :root {
-    --color-bg: #000000;
-    --color-bg-variant: #707070;
-    --color-primary: #ffffff;
-    --color-primary-variant: rgba(123, 123, 123, 0.4);
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
+    --color-bg: #ffdeb8;
+    /* --color-bg: #1b5772; */
+    --color-bg-variant: #5e3b0dc5;
+    --color-primary: #5e3b0dc5;
+    --color-primary-variant: #5e3b0dc5;
+    --color-white: #ffffff;
+    --color-light: rgb(255, 255, 255);
+    --color-black: #000000;
 
     --transition: all 400ms ease;
 
@@ -57,7 +59,7 @@ body {
     line-height: 1.7;
 
     /* Sets background to texture of png image */
-    background-image: url(../src/assets/bg-texture.png);
+   
 }
 
 /* === GENERAL STYLES === */
@@ -87,7 +89,7 @@ section {
 /* Every section will have an h2 and h5, a direct child of the section tag */
 section > h2, section > h5 {
     text-align: center;
-    color: var(--color-light);
+    color: var(--color-primary);
 }
 
 section > h2 {
@@ -119,13 +121,13 @@ various components easier */
     width: max-content;
 
     display: inline-block;
-    color: var(--color-primary);
+    color: var(--color-black);
 
     /* 0.75 handles the top and bottom, 1.2 is for the left and right */
     padding: 0.75rem 1.2rem;
     border-radius: 0.4rem;
     cursor: pointer;
-    border: 1px solid var(--color-primary);
+    border: 2px solid var(--color-black);
 
     /* To smoothen the hover */
     transition: var(--transition);
@@ -133,9 +135,9 @@ various components easier */
 
 /* Adding a hover effect to each button */
 .btn:hover {
-    background: var(--color-white);
-    color: var(--color-bg);
-    border-color: transparent;
+    background: var(--color-bg);
+    color: var(--color-white);
+    border-color: var(--color-black);
 }
 
 /* Some buttons will utilize another btn primary class */

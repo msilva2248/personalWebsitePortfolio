@@ -73,7 +73,7 @@
 
 /* Targeting the style of the icons */
 .about__icon {
-    color: var(--color-primary);
+    color: var(--color-bg);
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
@@ -95,7 +95,7 @@
 .about__content p {
     /* 2rem for the top, 0 for the left and right, 2.6rem for the bottom */
     margin: 2rem 0 2.6rem;
-    color: var(--color-light);
+    color: var(--color-black);
 }
 
 /* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */

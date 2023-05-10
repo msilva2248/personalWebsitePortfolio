@@ -42,10 +42,15 @@
 /* Styles the send message link of the contact options */
 .contact__option a {
     margin-top: 0.7rem;
+    color: var(--color-white);
 
     /* inline-block allows you to set a width and height on the element */
     display: inline-block;
     font-size: 0.8rem;
+}
+
+.contact__option h5 {
+    font-size:small;
 }
 
 /* === FORM === */
@@ -54,6 +59,18 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+}
+
+form input::placeholder {
+    font-size: large;
+    color: var(--color-black);
+    opacity: 1;
+}
+
+form textarea::placeholder {
+    font-size: large;
+    color: var(--color-black);
+    opacity: 1;
 }
 
 /* Styles the name and email inputs, along with the text area */

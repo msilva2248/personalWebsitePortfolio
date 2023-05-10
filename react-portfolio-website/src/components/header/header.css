@@ -10,6 +10,7 @@ header {
     text-align: center;
     height: 100%;
     position: relative;
+    color: var(--color-primary);
 }
 
 /* === CTA (Call to Action buttons) === */
@@ -75,6 +76,7 @@ header {
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
+    color: var(--color-primary);
 }
 
 /* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */
