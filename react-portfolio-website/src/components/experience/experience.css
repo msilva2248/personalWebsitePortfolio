@@ -34,6 +34,7 @@ allows for better organization on the web page */
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-white);
+    text-shadow: 2px 2px 10px #000000;
 }
 
 /* .experience__frontend table {
@@ -52,10 +53,12 @@ allows for better organization on the web page */
     width: 150px;
     text-align: center;
     padding: 5px;
+    text-shadow: 2px 2px 10px #000000;
 }
 
 .experience__container > div th {
     text-align: center;
+    text-shadow: 2px 2px 10px #000000;
 }
 
 /* .table {

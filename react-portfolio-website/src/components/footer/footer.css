@@ -77,7 +77,7 @@ footer a {
 /* Changes size and margins of elements to fit the smaller devices */
 @media screen and (max-width: 600px) {
     .permalinks {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1.5rem;
     }
 

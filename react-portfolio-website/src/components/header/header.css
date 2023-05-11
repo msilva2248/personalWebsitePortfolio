@@ -16,6 +16,7 @@ header {
 /* === CTA (Call to Action buttons) === */
 .cta {
     margin-top: 2.5rem;
+    text-shadow: 2px 2px 10px #000000;
 
     /* To create space between buttons */
     display: flex;
@@ -61,6 +62,7 @@ header {
 
     /* 12 rem for top left and right, 0 for bottom left and right */
     border-radius: 12rem 12rem 0 0;
+    border: 2px solid var(--color-white);
 
     overflow: hidden;
 
@@ -77,6 +79,10 @@ header {
     font-weight: 300;
     font-size: 0.9rem;
     color: var(--color-primary);
+}
+
+.scroll__down:hover {
+    text-shadow: 0px 0px 5px #000000;
 }
 
 /* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */

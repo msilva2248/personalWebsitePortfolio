@@ -25,6 +25,8 @@
     --color-primary-variant: #5e3b0dc5;
     --color-white: #ffffff;
     --color-light: rgb(255, 255, 255);
+
+    
     --color-black: #000000;
 
     --transition: all 400ms ease;
@@ -59,6 +61,7 @@ body {
     line-height: 1.7;
 
     /* Sets background to texture of png image */
+    
    
 }
 
@@ -121,13 +124,13 @@ various components easier */
     width: max-content;
 
     display: inline-block;
-    color: var(--color-black);
+    color: var(--color-white);
 
     /* 0.75 handles the top and bottom, 1.2 is for the left and right */
     padding: 0.75rem 1.2rem;
     border-radius: 0.4rem;
     cursor: pointer;
-    border: 2px solid var(--color-black);
+    border: 2px solid var(--color-white);
 
     /* To smoothen the hover */
     transition: var(--transition);
@@ -135,9 +138,9 @@ various components easier */
 
 /* Adding a hover effect to each button */
 .btn:hover {
-    background: var(--color-bg);
+    background: var(--color-primary);
     color: var(--color-white);
-    border-color: var(--color-black);
+    border-color: var(--color-white);
 }
 
 /* Some buttons will utilize another btn primary class */
@@ -145,7 +148,14 @@ various components easier */
     background: var(--color-primary);
 
     /* Color of the text */
-    color: var(--color-bg);
+    color: var(--color-white);
+    text-shadow: 2px 2px 10px #000000;
+}
+
+.btn-primary:hover {
+    background: var(--color-bg);
+    color: var(--color-white);
+    border-color: var(--color-white);
 }
 
 img {

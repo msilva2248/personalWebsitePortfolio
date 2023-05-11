@@ -47,10 +47,16 @@
     /* inline-block allows you to set a width and height on the element */
     display: inline-block;
     font-size: 0.8rem;
+    text-shadow: 2px 2px 10px #000000;
 }
 
 .contact__option h5 {
     font-size:small;
+    text-shadow: 2px 2px 10px #000000;
+}
+
+.contact__option h4 {
+    text-shadow: 2px 2px 10px #000000;
 }
 
 /* === FORM === */
@@ -63,14 +69,16 @@ form {
 
 form input::placeholder {
     font-size: large;
-    color: var(--color-black);
+    color: var(--color-white);
     opacity: 1;
+    text-shadow: 1px 1px 10px #000000;
 }
 
 form textarea::placeholder {
     font-size: large;
-    color: var(--color-black);
+    color: var(--color-white);
     opacity: 1;
+    text-shadow: 1px 1px 10px #000000;
 }
 
 /* Styles the name and email inputs, along with the text area */
@@ -86,6 +94,7 @@ input, textarea {
 
     /* Sets text color to white to make it more visible */
     color: var(--color-white);
+    text-shadow: 1px 1px 10px #000000;
 }
 
 /* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */

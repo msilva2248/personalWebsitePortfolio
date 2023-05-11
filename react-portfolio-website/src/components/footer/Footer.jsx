@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './footer.css'
 import {BsLinkedin} from 'react-icons/bs'
 
