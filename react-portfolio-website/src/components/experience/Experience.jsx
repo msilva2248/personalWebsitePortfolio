@@ -13,7 +13,7 @@ const Experience = () => {
   },[]);
 
   const loadFrontend=async()=>{
-    const result=await axios.get("http://localhost:8080/frontend/skills");
+    const result=await axios.get("http://13.56.254.156:8080/frontend/skills");
     setFrontend(result.data);
   }
 
@@ -25,7 +25,7 @@ const Experience = () => {
   },[]);
 
   const loadBackend=async()=>{
-    const result=await axios.get("http://localhost:8080/backend/skills");
+    const result=await axios.get("http://13.56.254.156:8080/backend/skills");
     setBackend(result.data);
   }
 

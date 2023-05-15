@@ -15,7 +15,7 @@ const About = () => {
   },[]);
 
   const loadAbout=async()=>{
-    const result=await axios.get("http://localhost:8080/about/me");
+    const result=await axios.get("http://13.56.254.156:8080/about/me");
     setAbout(result.data);
   }
 
