@@ -5,5 +5,5 @@ For the frontend portion of this application, I utilize React JS, HTML5, CSS3, V
 
 For the backend portion of this application, I utilize Spring Boot, Node JS, Java 17, Maven, MySQL, IntelliJ, and Postman to create the database schema, insert values into the tables, connect to MySQL db/create the end-to-end connection and return the requested data for extraction from the frontend side.
 
-Link
+Link:
 http://personalwebportfolio.s3-website-us-west-1.amazonaws.com/
