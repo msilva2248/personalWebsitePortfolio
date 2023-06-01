@@ -68,10 +68,9 @@ const Portfolio = () => {
                 </div>
                   <h3>{title}</h3>
                     <div className='portfolio__item-cta'>                
-                      {/* a creates hyperlink, href contains the URL to github repo or live demo */
+                      {/* a creates hyperlink, href contains the URL to github repo*/
                       /* Also includes a blank target so each open in a new tab */}
                       <a href={github} className='btn' target='_blank'>GitHub</a>
-                      {/* <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> */}
                     </div>
               </article>
             )

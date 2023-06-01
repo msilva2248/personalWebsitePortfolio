@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './experience.css'
 import {BsPatchCheckFill} from 'react-icons/bs'
+
+// library that communicates with the backend
+// used to make requests to an API, return data from it, and then perform an action with the results
 import axios from 'axios'
 
 const Experience = () => {
@@ -12,6 +15,11 @@ const Experience = () => {
     loadFrontend();
   },[]);
 
+  // once the await is reached, the program continues to run while the data is extracted from the url
+  // it waits for the result before it can utilize the result
+  // .get makes an HTTP request to the url used for getting the data in postman
+  // the results are stored within an array
+  // results are then used below to display on the frontend
   const loadFrontend=async()=>{
     const result=await axios.get("http://13.56.254.156:8080/frontend/skills");
     setFrontend(result.data);
@@ -24,22 +32,15 @@ const Experience = () => {
     loadBackend();
   },[]);
 
+
+  // once the await is reached, the program continues to run while the data is extracted from the url
+  // it waits for the result before it can utilize the result
+  // .get makes an HTTP request to the url used for getting the data in postman
+  // the results are stored within an array
   const loadBackend=async()=>{
     const result=await axios.get("http://13.56.254.156:8080/backend/skills");
     setBackend(result.data);
   }
-
-  // Loads about me info and sets values to result
-  // const [about, setAbout]=useState([])
-
-  // useEffect(()=>{
-  //   loadAbout();
-  // },[]);
-
-  // const loadAbout=async()=>{
-  //   const result=await axios.get("http://localhost:8080/about/me");
-  //   setAbout(result.data);
-  // }
 
   return (
     <section id='experience'>
@@ -61,8 +62,11 @@ const Experience = () => {
             </thead>
             <tbody>
               {
+                /* maps through all skills returned from api*/
                 frontend.map((frontend, index)=>(
                   <tr>
+                    {/*after results are stored in array, they are used below to display on the frontend*/
+                    /* name and expLevel are data returned from api request */}
                     <td>{frontend.name}</td>
                     <td>{frontend.expLevel}</td>
                   </tr>

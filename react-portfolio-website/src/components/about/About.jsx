@@ -43,7 +43,6 @@ const About = () => {
             <article className='about__card'>
               <FaAward className='about__icon'/>
               <h5>Experience</h5>
-              {/* <small>4+ Years Experience</small> */}
               {
                 about.map((about, index)=>(
                   <small>{about.experience}</small>
@@ -54,7 +53,6 @@ const About = () => {
             <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              {/* <small>15+ Completed</small> */}
               {
                 about.map((about, index)=>(
                   <small>{about.projects}</small>
@@ -70,9 +68,6 @@ const About = () => {
                 <small>{about.intro}</small>
               ))
             }
-            {/* I graduated from Texas Tech University on December 17th, 2022 with a Bachelor's degree in 
-            Computer Science and a minor in Mathematics. I am currently pursuing
-            a career in Software Development in El Paso, TX or Remote. */}
           </p>
 
             {/* a tag creates a hyperlink, href contains the URL to the destination */

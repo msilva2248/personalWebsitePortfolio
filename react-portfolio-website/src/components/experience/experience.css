@@ -37,12 +37,6 @@ allows for better organization on the web page */
     text-shadow: 2px 2px 10px #000000;
 }
 
-/* .experience__frontend table {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-primary);
-} */
-
 .experience__container > div table {
     text-align: center;
     margin-bottom: 2rem;
@@ -60,52 +54,6 @@ allows for better organization on the web page */
     text-align: center;
     text-shadow: 2px 2px 10px #000000;
 }
-
-/* .table {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-primary);
-}
-
-.table > thead th {
-    text-align: center;
-}
-
-.table > tbody td {
-    width: 150px;
-    text-align: center;
-    padding: 5px;
-} */
-
-/* .skills__icon {
-    padding: 5px;
-    color: var(--color-primary);
-} */
-
-
-
-/* Style the content within each skill header */
-/* .experience__content {
-    display: grid; */
-
-    /* 1fr ensures half the available space is taken up, with a row gap 
-    to ensure space between each skill */
-    /* grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
-} */
-
-/* Styles the actual skills and level of experience */
-/* .experience__details { */
-    /* Flexible design on web page */
-    /* display: flex;
-    gap: 1rem;
-} */
-
-/* Styles the check icon of all skills so it can be aligned correctly */
-/* .experience__details-icon {
-    margin-top: 6px;
-    color: var(--color-primary);
-} */
 
 /* === MEDIA QUERIES (MEDIUM DEVICES, like a tablet) === */
 @media screen and (max-width: 1024px) {
