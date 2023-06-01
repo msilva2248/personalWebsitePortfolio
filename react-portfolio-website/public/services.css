@@ -1,0 +1,205 @@
+/* Creating CSS variables, (root variables so they can be used anywhere in the project) */
+:root {
+    --color-bg: #ffdeb8;
+    /* --color-bg: #1b5772; */
+    --color-bg-variant: #5e3b0dc5;
+    --color-primary: #5e3b0dc5;
+    --color-primary-variant: #5e3b0dc5;
+    --color-white: #ffffff;
+    --color-light: rgb(255, 255, 255);
+
+    
+    --color-black: #000000;
+
+    --transition: all 400ms ease;
+
+    /* Width of container class that will wrap around different elements */
+    /* lg, md, and sm for large, medium and small */
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  section {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, var(--color-bg-variant) 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  .icon-wrapper {
+    background-color: var(--color-bg-variant);
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: var(--transition);
+  }
+  .card:hover {
+    background-position: 0 100%;
+  }
+  .card:hover .icon-wrapper {
+    background-color: #ffffff;
+    color: var(--color-bg-variant);
+  }
+  .card:hover h3 {
+    color: #ffffff;
+  }
+  .card:hover p {
+    color: #f0f0f0;
+  }
+
+  .card:hover ul {
+    color: #ffffff;
+  }
+
+  ul {
+    text-align: center;
+    list-style-position: inside;
+  }
+
+  .fiverr-icon-wrapper {
+    background-color: var(--color-bg-variant);
+    font-size: 15px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: grid;
+    flex-direction: column;
+    place-items: center;
+    position: absolute;
+    transition: var(--transition);
+  }
+
+  .fiverr-icon-wrapper:hover {
+    background-color: #ffffff;
+    color: var(--color-bg-variant);
+    border-color: var(--color-primary-variant);
+  }
+
+  nav {
+    /* Color black with some transparency */
+    background: #5e3b0d71;
+
+    /* Fits exactly its contents */
+    width: max-content;
+    display: block;
+
+    /* 0.7 for top and bottom, 1.7 for left and right */
+    padding: 0.7rem 1.7rem;
+    z-index: 2;
+
+    /* Fixed position so it stays in place */
+    position: fixed;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+
+    /* Creates space between buttons with a gap */
+    display: flex;
+    gap: 0.8rem;
+
+    border-radius: 3rem;
+
+    /* Adds a blur behind the icons when going over them */
+    backdrop-filter: blur(15px);
+}
+
+  /* Targeting the links inside the nav bar */
+  nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+  
+    /* Creates space between the links in this case */
+    display: flex;
+  
+    color: var(--color-light);
+    font-size: 1.1rem;
+  }
+  
+  /* Adding a hover effect to icons in nav bar */
+  nav a:hover {
+    background: #5e3b0d71;
+  }
+  
+  /* Create an active class which is home in this case by default */
+  nav a.active {
+    background: var(--color-bg);
+    
+    /* Color of text */
+    color: var(--color-white);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    section {
+      padding: 0 2em;
+    }
+    .column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+  }

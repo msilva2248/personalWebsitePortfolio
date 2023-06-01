@@ -59,12 +59,7 @@ body {
     /* Sets text color to value of our CSS variable white */
     color: var(--color-white);
 
-    line-height: 1.7;
-
-    /* Sets background to texture of png image */
-    /* background-image: url(../src/assets/Background.jpg); */
-    
-   
+    line-height: 1.7;  
 }
 
 /* === GENERAL STYLES === */

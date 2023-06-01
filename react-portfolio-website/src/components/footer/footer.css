@@ -53,9 +53,6 @@ footer a {
     border-radius: 0.7rem;
     display: flex;
     border: 1px solid transparent;
-
-    /* Creates a smooth hover transition */
-    /* transition: var(--transition);*/
 }
 
 /* Creates a hover effect over the social */
